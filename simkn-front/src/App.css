@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -15,6 +20,7 @@
 
 .App-header {
   background-color: #282c34;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +41,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.header{
+  position: relative;
+}
+.menu-icon{
+ display: none;
+ color:#fff;
+
+
+ 
+}
+@media screen and (max-width:768px){
+  .menu-icon{
+    display: inline-block;
+   vertical-align: middle;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(-50%,50%);
+  
+   
+
+  }
+}
+
+.nav-menu{
+  display:none;
+}
+@media screen and (max-width:767px){
+.nav-menu.active{
+  display: flex;
+  flex-flow:column;
+  justify-content:center;
+  width:100%;
+}
+}
+@media screen and (min-width:769px){
+.nav-menu,.nav-menu.active{
+  
+  display:flex;
+}
+
+}
+.menu-position{
+  position: relative;
+}
+.dropdown-menu{
+ position: absolute;
+ top:0;
+ left:0;
+  
+  display: block;
+  background:#aaa;
+}
+
+.Dropdown{
+  display: block;
+  height:10px;
+  background-color: red;
+  padding: 10px;
 }
