@@ -60,7 +60,7 @@ function Navbar() {
 
                     return (
 
-                        <NavLink to={item.path} onClick={() => item.subNav && showSubnav(subnav => !subnav)} key={index}>
+                        <NavLink to={item.path} onClick={() => item.subNav && showSubnav(subnav => !subnav)} key={index} onMouseEnter={item.subNav && onMouseEnter} onMouseLeave={item.subNav && onMouseLeave}>
 
                             <div >
                                 {item.title}
